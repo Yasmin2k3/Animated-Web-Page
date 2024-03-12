@@ -1,0 +1,187 @@
+/*colors: background: #040303 primary: #3B0707 secondary: #1D1616 accent: #6E9191*/
+
+*, *::before, &*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #040303;
+    font-family: 'Crimson Text', serif;
+    margin: 0;
+}
+
+::selection{
+    background-color: rgba(70, 17, 17, 0.5);
+}
+
+.logo{
+    width: 100px;
+}
+
+header{
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+    padding: 0.9rem 0;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #040303;
+}
+
+header nav{
+    /*max-width: 2400px; */
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+header ul a{
+    text-decoration: none;
+    color: #fff;
+    padding: 0 1.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+.hamburger{
+    padding-left: 1.5rem;
+}
+
+.hamburger a{
+    padding: 0;
+    width: 37px;
+    height: 37px;
+    display: flex;
+    border-radius: 50%;
+    background-color: rgba(115, 115, 115, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger .bar{
+    position: relative;
+    width: 52%;
+    height: 1.2px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.hamburger .bar::before, .hamburger .bar::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 100%;
+    background-color: inherit;
+    border-radius: 2px;
+}
+
+.hamburger .bar::before{
+    top: -4.5px;
+}
+
+.hamburger .bar::after{
+    top: 4.5px;
+}
+
+main{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.text{
+    color: #fff;
+    position: absolute;
+    z-index: 10; /*number according to layer number*/
+    top: calc(50% - 130px); /*moves it up*/
+    left: 50%;
+    text-align: center;
+    text-transform: uppercase;
+    /*transform: translate(-90%, -40%); makes text box go to left*/
+    transform: translate(-50%, -50%);
+}
+
+.text h1{
+    font-weight: 500;
+    font-size: 8rem;
+    line-height: 0.58;
+}
+
+.start-btn{
+    font-family: 'Crimson Text', serif;
+    border: 2px solid #6E9191;
+    border-radius: 15px;
+    background: none;
+    font-weight: 100;
+    font-size: 3rem;
+    line-height: 1.5;
+    padding: 10px 20px;
+    cursor: pointer;
+
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+/*.start-btn:hover{
+    color: #fff;
+}*/
+
+.start-btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #6E9191;
+    z-index: -1;
+    transition: 0.8s;
+
+    /*animation */
+    bottom: 0;
+    border-radius:50% 50% 0 0;
+}
+
+.start-btn:hover::before{
+    height: 200%;
+}
+
+
+.vignette{
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.7));
+}
+
+.container{
+    border-radius: 20px;
+    padding: 8rem 16rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.bg{
+    width: 100vw;
+    height: 100vh;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hide">
+        <nav>
+            <img src="#" alt="logo" class="logo">
+            <ul>
+                <li>
+                    <a href="#">About This Website</a>
+                </li>
+                <li>
+                    <a href="#">About me</a>
+                </li>
+                <li class="hamburger">
+                    <a href="#">
+                        <div class="bar"></div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="vignette hide"></div>
+        <img src="images\temp_bg.jpg" alt="" class="bg">
+        <!--add layers the same order they will be in csp-->
+        <div class="text">
+            <div class="container hide">
+                <h1>Welcome</h1>
+                <!--<h2>bok bok bok</h2> -->
+                <button onclick="goAway('charPage.html')" class="start-btn">Let's Get Started</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
